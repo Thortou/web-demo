@@ -1,0 +1,59 @@
+/* Font imports */
+/* @import './font/Montserrat/Montserrat.css'; */
+@import './font/NotoSansLao/NotoSansLao.css';
+@import './font/Lao_Patuxai3/LaosPatuxai.css';
+
+/* Global font configuration - Already correct! */
+* {
+  font-family: 'Laos_Patuxai', 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* Add for Firefox */
+}
+
+/* Ensure your LaoPatuxai.css file contains this font-face declaration */
+
+/* @font-face {
+    font-family: 'Lao_Patuxai';
+    src: url('./Lao_Patuxai.ttf') format('truetype'); 
+    font-weight: 100 900;
+    font-style: normal;
+    unicode-range: U+0E80-0EFF;
+    font-display: swap;
+} */
+
+
+/* Ant Design customizations */
+:where(.css-dev-only-do-not-override-16pw25h).ant-input-number {
+  width: 100% !important;
+}
+
+.anticon {
+  vertical-align: 0.1em !important;
+  font-size: 16px !important;
+}
+
+/* Force Ant Design components to inherit the global font */
+.ant-input, 
+.ant-select, 
+.ant-button, 
+.ant-menu, 
+.ant-table,
+.ant-typography {
+  font-family: inherit !important;
+}
+
+/* Optional: Performance improvement */
+html {
+  font-family: 'Lao_Patuxai', 'Montserrat', sans-serif;
+}
+
+/* Debug: Check if font is loading (remove after testing) */
+.font-test {
+  font-family: 'Lao_Patuxai';
+  font-size: 24px;
+  color: red;
+}
+
+/* Add this temporarily to test:
+<div class="font-test">ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ</div>
+*/
